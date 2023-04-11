@@ -38,7 +38,7 @@ options="$options --test_size_filters=small,medium,large"
 
 # options="$options --test_env=MIOPEN_DEBUG_CONVOLUTION_ATTRIB_FP16_ALT_IMPL=0"
 # options="$options --test_env=ROCBLAS_INTERNAL_FP16_ALT_IMPL=0"
-
+# options="$options --test_env=MIOPEN_DEBUG_DISABLE_FIND_DB=1"
 # options="$options --test_env=MIOPEN_LOG_LEVEL=7"
 # options="$options --test_env=MIOPEN_ENABLE_LOGGING=1"
 # options="$options --test_env=MIOPEN_ENABLE_LOGGING_CMD=1"
@@ -82,11 +82,13 @@ options="$options --test_size_filters=small,medium,large"
 # options="$options --action_env=HIPCC_COMPILE_FLAGS_APPEND=-flegacy-pass-manager"
 # options="$options --action_env=HIPCC_COMPILE_FLAGS_APPEND=-fno-legacy-pass-manager"
 
+# options="$options --test_env=TF_AUTO_MIXED_PRECISION_GRAPH_REWRITE_LOG_PATH='/workspace"
 # options="$options --test_env=TF_CPP_MIN_LOG_LEVEL=1"
 # options="$options --test_env=TF_CPP_MIN_VLOG_LEVEL=1"
 # options="$options --test_env=TF_CPP_MAX_VLOG_LEVEL=3"
 
-# vmodules="dummy=1"
+# vmodules="rocm_dnn=1"
+# vmodules="gpu_util=1"
 # vmodules="$vmodules,rocm_tracer=3"
 # vmodules="$vmodules,device_tracer_rocm=3"
 # vmodules="$vmodules,meta_optimizer=4"
